@@ -22,6 +22,7 @@ public class Book {
     @Column(nullable = false)
     private String author;
 
+    @Builder.Default
     private boolean available = true;
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
